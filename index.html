@@ -1,171 +1,379 @@
 <!doctype html>
 
-<!--
 
-    Welcome to the light side of the source, young padawan.
-
-    One step closer to learn something interesting you are...
-
-                               ____                  
-                            _.' :  `._               
-                        .-.'`.  ;   .'`.-.           
-               __      / : ___\ ;  /___ ; \      __  
-             ,'_ ""=-.:__;".-.";: :".-.":__;.-="" _`,
-             :' `.t""=-.. '<@.`;_  ',@:` ..-=""j.' `;
-                  `:-.._J '-.-'L__ `-.-' L_..-;'     
-                    "-.__ ;  .-"  "-.  : __.-"       
-                        L ' /.======.\ ' J           
-                         "-.   "__"   .-"            
-                        __.l"-:_JL_;-";.__           
-                     .-j/'.;  ;""""  / .'\"-.        
-                   .' /:`. "-.:     .-" .';  `.      
-                .-"  / ;  "-. "-..-" .-"  :    "-.   
-             .+"-.  : :      "-.__.-"      ;-._   \  
-             ; \  `.; ;                    : : "+. ; 
-             :  ;   ; ;                    : ;  : \: 
-             ;  :   ; :                    ;:   ;  : 
-            : \  ;  :  ;                  : ;  /  :: 
-            ;  ; :   ; :                  ;   :   ;: 
-            :  :  ;  :  ;                : :  ;  : ; 
-            ;\    :   ; :                ; ;     ; ; 
-            : `."-;   :  ;              :  ;    /  ; 
-             ;    -:   ; :              ;  : .-"   : 
-             :\     \  :  ;            : \.-"      : 
-              ;`.    \  ; :            ;.'_..-=  / ; 
-              :  "-.  "-:  ;          :/."      .'  :
-               \         \ :          ;/  __        :
-                \       .-`.\        /t-""  ":-+.   :
-                 `.  .-"    `l    __/ /`. :  ; ; \  ;
-                   \   .-" .-"-.-"  .' .'j \  /   ;/ 
-                    \ / .-"   /.     .'.' ;_:'    ;  
-                     :-""-.`./-.'     /    `.___.'   
-                           \ `t  ._  /               
-                            "-.t-._:'                
-
--->
-
-<!--
-    
-    So you'd like to know how to use impress.js?
-    
-    You've made the first, very important step - you're reading the source code.
-    And that's how impress.js presentations are built - with HTML and CSS code.
-    
-    Believe me, you need quite decent HTML and CSS skills to be able to use impress.js effectively.
-    More importantly, you need to be a designer. There are no default styles or layouts for impress.js presentations.
-    
-    You need to design and build it by hand.
-    
-    So...
-    
-    Would you still like to know how to use impress.js?
-    
--->
-
-<html lang="en">
+<html lang="zh">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=1024" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
-    
-    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
-    <meta name="author" content="Bartek Szopka" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=1024"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern
+        browsers</title>
 
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <meta name="description"
+          content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com."/>
+    <meta name="author" content="Bartek Szopka"/>
 
-    <!--
-        
-        Impress.js doesn't depend on any external stylesheets. It adds all of the styles it needs for the
-        presentation to work.
-        
-        This style below contains styles only for demo presentation. Browse it to see how impress.js
-        classes are used to style presentation steps, or how to apply fallback styles, but I don't want
-        you to use them directly in your presentation.
-        
-        Be creative, build your own. We don't really want all impress.js presentations to look the same,
-        do we?
-        
-        When creating your own presentation get rid of this file. Start from scratch, it's fun!
-        
-    -->
-    <link href="css/impress-demo.css" rel="stylesheet" />
-    <link href="css/impress-common.css" rel="stylesheet" />
-    
-    <link rel="shortcut icon" href="favicon.png" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+    <link href="./css/chinese-young-pioneer.css" rel="stylesheet"/>
+    <link href="./css/impress-common.css" rel="stylesheet"/>
+
+    <link rel="shortcut icon" href="favicon.png"/>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
 </head>
 
-<!--
-    
-    Body element is used by impress.js to set some useful class names, that will allow you to detect
-    the support and state of the presentation in CSS or other scripts.
-    
-    First very useful class name is `impress-not-supported`. This class means, that browser doesn't
-    support features required by impress.js, so you should apply some fallback styles in your CSS.
-    It's not necessary to add it manually on this element. If the script detects that browser is not
-    good enough it will add this class, but keeping it in HTML means that users without JavaScript
-    will also get fallback styles.
-    
-    When impress.js script detects that browser supports all required features, this class name will
-    be removed.
-    
-    The class name on body element also depends on currently active presentation step. More details about
-    it can be found later, when `hint` element is being described.
-    
--->
 <body class="impress-not-supported">
 
-<!--
-    For example this fallback message is only visible when there is `impress-not-supported` class on body.
--->
 <div class="fallback-message">
-    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified
+        version of this presentation.</p>
     <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
 </div>
 
-<!--
-    
-    Now that's the core element used by impress.js.
-    
-    That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
-    It doesn't have to be a `<div>`. Only `id` is important here as that's how the script find it.
-    
-    Often you don't need to use any attributes here, but for educational purposes I have used all of them below.
 
-    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
-    a number of ms. It defaults to 1000 (1s).
-    
-    When authoring impress.js presentations, you should target some screen size, which you can define here.
-    The default is 1024 x 768. You should write your CSS as if this is the screen size used for the
-    presentation. When you present your presentation on a screen (or browser window) of different size,
-    impress.js will automatically scale the presentation to fit the screen. The minimum and maximum limits
-    to this scaling can also be defined here.
-    
-    NOTE: I intend to change the defaults to target HD screens in 2021. So you may want to make a habit
-    of explicitly defining these attributes for now, to avoid any disruption when the defaults change.
-    
-    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
-    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
-    If you are willing to change this value make sure you understand how CSS perspective works:
-    https://developer.mozilla.org/en/CSS/perspective
-    
-    Plugins:
-    
-    We set the default time for autoplay plugin to 7 seconds. Autoplay will automatically advance
-    to next slide after a timeout expires.
--->
+<video id="bg-video-honglingjin" class="bg-video-shaoxiandui__content" autoplay muted loop>
+    <source src="./pioneer/bg-video-01.mp4" type="video/mp4">
+    Your browser is not supported!
+</video>
+
+<video id="bg-video-song" class="bg-video-song__content" autoplay>
+    <source src="./pioneer/song.mp4" type="video/mp4">
+    Your browser is not supported!
+</video>
+
 <div id="impress"
-    data-transition-duration="1000"
-    
-    data-width="1024"
-    data-height="768"
-    data-max-scale="3"
-    data-min-scale="0"
-    data-perspective="1000"
-    
-    data-autoplay="7">
+     data-transition-duration="1000"
 
+     data-width="1024"
+     data-height="768"
+     data-max-scale="3"
+     data-min-scale="0"
+     data-perspective="1000"
+
+>
+
+
+    <div id="p-title" class="step" data-x="-2000" data-y="-1500" data-z="0" data-scale="2">
+        <h2><span>——孔雀组</span><img src="./pioneer/team-logo.png"><span
+                class="sec-span">“我爱中国少年先锋队”主题班会</span></h2>
+    </div>
+
+    <!--    <img src="./pioneer/snow-01.jpg" id="p-title-snow" class="step skip" data-x="-19500" data-y="-1100" data-z="-1000" data-scale="0.3"-->
+    <!--         data-rotate-z="-10"-->
+    <!--         data-rotate-x="20"-->
+    <!--         data-rotatey="10"-->
+    <!--    />-->
+    <!--    <img src="./pioneer/team-member.jpg" id="p-title-bg2" class="step skip" data-x="-20050" data-y="-1100" data-z="-1000" data-scale="0.3"-->
+    <!--         data-rotate-x="20"-->
+    <!--         data-rotatey="10"-->
+    <!--    />-->
+
+    <!--    <div id="p-bg" class="step skip" data-x="-1000" data-y="-1500" data-z="-5000" data-scale="5">-->
+    <!--    </div>-->
+
+    <div id="p-subtitle-1" class="step subtitle" data-x="0" data-y="-1500" data-z="0" data-scale="1">
+        <h1>开场破冰</h1>
+        <h2></h2>
+    </div>
+
+
+    <div id="p-subtitle-2" class="step subtitle" data-x="2000" data-y="-1500" data-z="-500" data-scale="1">
+        <h1>少先队 知多少？</h1>
+    </div>
+
+    <div id="p-knowledge" class="step p-content" data-x="2000" data-y="-500" data-z="-500" data-scale="1">
+        <h2>什么是少年先锋队？</h2>
+    </div>
+
+    <div id="p-knowledge-answer" class="step p-content" data-x="2000" data-y="500" data-z="500" data-scale="1">
+        <h3>少年先锋队的名片</h3>
+        <div class="answer-content">
+            <div>名 称</div>
+            <div>中国少年先锋队</div>
+
+            <div>简 称</div>
+            <div>少先队、中国少先队</div>
+
+            <div>章 程</div>
+            <div>《中国少年先锋队章程》</div>
+
+            <div>会 议</div>
+            <div>少先队代表大会</div>
+
+            <div>作 风</div>
+            <div>诚实、勇敢、活泼、团结</div>
+
+            <div>创立者</div>
+            <div>中国共产党</div>
+
+            <div>性 质</div>
+            <div>中国少年儿童的群团组织</div>
+
+            <div>建队日</div>
+            <div>1949年10月13日</div>
+        </div>
+        <div>
+            <img src="./pioneer/bg-card02.png" alt="" id="bg-card02">
+            <img src="./pioneer/bg-card01.png" alt="" id="bg-card01">
+            <img src="./pioneer/bg-card03.png" alt="" id="bg-card03">
+        </div>
+    </div>
+
+    <div id="p-knowledge-answer02-bg" class="step p-content skip" data-x="2000" data-y="1500" data-z="1500"
+         data-scale="1.2">
+        <h3>少年先锋队的发展</h3>
+    </div>
+
+    <div id="p-knowledge-answer02-01" class="step p-content knowledge-answer02" data-x="1800" data-y="1600"
+         data-z="2000" data-scale="0.5">
+        <div class="answer-content">
+            <h5><span>1</span>劳动童子团</h5>
+            <div>成立于第一次国内革命时期（1924年～1927年）,从成立的第一天起，围绕党的工作开展了一系列活动。</div>
+        </div>
+    </div>
+
+    <div id="p-knowledge-answer02-02" class="step p-content knowledge-answer02" data-x="1880" data-y="1680"
+         data-z="2000" data-scale="0.5">
+        <div class="answer-content">
+            <h5><span>2</span>共产儿童团</h5>
+            土地革命战争时期，共青团"五大"制定了"儿童运动工作决议案"，劳动童子团逐步得到恢复和发展。
+        </div>
+    </div>
+
+    <div id="p-knowledge-answer02-03" class="step p-content knowledge-answer02" data-x="2000" data-y="1650"
+         data-z="2000" data-scale="0.5">
+        <div class="answer-content">
+            <h5><span>3</span>抗日儿童团</h5>
+            抗日儿童团是抗日战争时期中国共产党领导的广大抗日根据地建立的抗日救国的少年儿童革命组织。
+        </div>
+    </div>
+
+    <div id="p-knowledge-answer02-04" class="step p-content knowledge-answer02" data-x="2080" data-y="1720"
+         data-z="2000" data-scale="0.5">
+        <div class="answer-content">
+            <h5><span>4</span>儿童团和少先队</h5>
+            解放战争时期各解放区的儿童团，地下少先队组织为解放战争的胜利作出了积极贡献。
+        </div>
+    </div>
+
+    <div id="p-knowledge-answer02-05" class="step p-content knowledge-answer02" data-x="2180" data-y="1650"
+         data-z="2000" data-scale="0.5">
+        <div class="answer-content">
+            <h5><span>5</span>中国少先队</h5>
+            新中国成立后，少先队走向正规，蓬勃发展。至今，少先队活动中关于培养少年儿童素质的内容逐渐增强。
+        </div>
+    </div>
+    <div id="p-knowledge-answer02-history" class="step p-content knowledge-answer02 skip" data-x="1885" data-y="1770"
+         data-z="2000" data-scale="0.5">
+        <img src="./pioneer/bg-history.png" alt="" id="bg-history">
+    </div>
+
+    <!--    <div id="p-knowledge-answer02" class="step p-content" data-x="2000" data-y="1700" data-z="2000" data-scale="0.5">-->
+    <!--        <h3>少年先锋队的发展</h3>-->
+    <!--        <div class="answer-content">-->
+    <!--            <div class="substep">-->
+    <!--                <h5>劳动童子团</h5>-->
+    <!--                成立于第一次国内革命时期（1924年～1927年）,从成立的第一天起，围绕党的工作开展了一系列活动。-->
+    <!--            </div>-->
+    <!--            <div  class="substep">-->
+    <!--                <h5>共产儿童团</h5>-->
+    <!--                土地革命战争时期，共青团"五大"制定了"儿童运动工作决议案"，劳动童子团逐步得到恢复和发展。-->
+    <!--            </div>-->
+    <!--            <div  class="substep">-->
+    <!--                <h5>抗日儿童团</h5>-->
+    <!--                抗日儿童团是抗日战争时期中国共产党领导的广大抗日根据地建立的抗日救国的少年儿童革命组织。-->
+    <!--            </div>-->
+    <!--            <div  class="substep">-->
+    <!--                <h5>儿童团和少先队</h5>-->
+    <!--                解放战争时期各解放区的儿童团，地下少先队组织为解放战争的胜利作出了积极贡献。-->
+    <!--            </div>-->
+    <!--            <div  class="substep">-->
+    <!--                <h5></h5>-->
+    <!--            </div>-->
+    <!--            <div  class="substep">-->
+    <!--                <h5>中国少先队</h5>-->
+    <!--                新中国成立后，少先队走向正规，蓬勃发展。至今，少先队活动中关于培养少年儿童素质的内容逐渐增强。-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+
+    <div id="p-knowledge02" class="step p-content" data-x="2085" data-y="2300" data-z="2000" data-scale="1">
+        <h2>少先队有什么相关标识？</h2>
+    </div>
+
+    <div id="p-knowledge02-answer" class="step p-content" data-x="2085" data-y="2700" data-z="2500" data-scale="1">
+        <h3>少年先锋队的队徽</h3>
+        <div class="identify">
+            <div class="identify-text">
+                五角星加火炬和写有“中国少先队”的红色绶带组成少先队队徽。五角星、“中国少先队”五个字和火炬柄为金色，绶带和火炬的火焰为正红色，火焰和绶带镶金边，“中国少先队”字体为黑体。
+            </div>
+            <div class="identify-img">
+                <img src="./pioneer/bg-logo.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div id="p-knowledge02-answer02" class="step p-content"  data-x="2085" data-y="3500" data-z="2500" data-scale="1" data-rotate-x="45">
+        <h3>少年先锋队的队旗</h3>
+        <div class="identify">
+            <div class="identify-img">
+                <div>
+                    <img src="./pioneer/flag01.png" alt="">
+                </div>
+                <div>
+                    <img src="./pioneer/flag02.png" alt="">
+                </div>
+            </div>
+            <div class="identify-text">
+                <div>队旗指大、中队旗。队旗颜色采用国旗红，可用布、绸、缎等材料按照标准制作。</div>
+                <div>大队旗长120厘米、高90厘米。旗中心是五角星和火炬，五角星为黄色，火炬由黄色线条勾勒出轮廓。</div>
+                <div>
+                    中队旗长80厘米、高60厘米。右端剪去高20厘米、底宽60厘米的等腰三角形，形成一个三角形缺口，五角星及火炬在以60厘米为边长的正方形中心。
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="p-knowledge02-answer03" class="step p-content"  data-x="2085" data-y="3500" data-z="3200" data-scale="1" data-rotate-x="90">
+        <h3>少年先锋队的红领巾</h3>
+        <div class="identify">
+            <div class="identify-text">
+                红领巾是少先队员的标志。它代表红旗的一角，是革命先烈的鲜血染成。每个队员都应该佩戴它和爱护它，为它增添新的荣誉。
+            </div>
+            <div class="identify-img">
+                <img src="./pioneer/flag-honglingjin.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div id="p-knowledge02-answer04" class="step p-content"  data-x="2085" data-y="3200" data-z="3800" data-scale="1" data-rotate-x="135">
+        <h3>少年先锋队的标志</h3>
+        <div class="identify">
+            <div class="identify-img">
+                <img src="./pioneer/flag-team.png" alt="">
+            </div>
+            <div class="identify-text">
+                <div>
+                    大队、中队委员会委员和小队长都要在佩戴红领巾的同时，在左臂佩戴队委（队长）标志。
+                </div>
+                <div>
+                    各级少先队组织不得使用不合规范的异形队委（队长）标志
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="p-subtitle-3" class="step subtitle" data-x="6200" data-y="5000" data-z="2000" data-scale="1">
+        <h1>行走的红领巾</h1>
+        <h2>——少先队和我的故事</h2>
+    </div>
+
+    <!--    <div id="p-walk-snow-01" class="step p-walk-snow" data-x="-5000"  data-y="-500" >-->
+    <!--        <img src="./pioneer/snow-walk-01.jpg" alt="">-->
+    <!--    </div>-->
+    <!--    <div id="p-walk-snow-02" class="step p-walk-snow" data-y="115">-->
+    <!--        <img src="./pioneer/snow-walk-02.jpg" alt="">-->
+    <!--    </div>-->
+    <!--&lt;!&ndash;    <div id="p-walk-snow-03" class="step p-walk-snow" data-y="-500"  data-rotate-y="60" data-rota>&ndash;&gt;-->
+    <!--&lt;!&ndash;        <img src="./pioneer/snow-walk-03.jpg" alt="">&ndash;&gt;-->
+    <!--&lt;!&ndash;    </div>&ndash;&gt;-->
+    <!--    <div id="p-walk-snow-article" class="step skip" data-x="-4300" data-y="-500">-->
+    <!--        文不太好。所以我最近不想学中文了。 我想说一下上个星期我在新干线站台排队的时候的事情。我看到有外国的游客向阿姨寻求帮助，所以我主动上前用英语询问她遇到什么问题。-->
+    <!--        文不太好。所以我最近不想学中文了。 我想说一下上个星期我在新干线站台排队的时候的事情。我看到有外国的游客向阿姨寻求帮助，所以我主动上前用英语询问她遇到什么问题。-->
+    <!--        文不太好。所以我最近不想学中文了。 我想说一下上个星期我在新干线站台排队的时候的事情。我看到有外国的游客向阿姨寻求帮助，所以我主动上前用英语询问她遇到什么问题。-->
+    <!--        文不太好。所以我最近不想学中文了。 我想说一下上个星期我在新干线站台排队的时候的事情。我看到有外国的游客向阿姨寻求帮助，所以我主动上前用英语询问她遇到什么问题。-->
+    <!--        文不太好。所以我最近不想学中文了。 我想说一下上个星期我在新干线站台排队的时候的事情。我看到有外国的游客向阿姨寻求帮助，所以我主动上前用英语询问她遇到什么问题。-->
+    <!--        文不太好。所以我最近不想学中文了。 我想说一下上个星期我在新干线站台排队的时候的事情。我看到有外国的游客向阿姨寻求帮助，所以我主动上前用英语询问她遇到什么问题。-->
+    <!--    </div>-->
+
+    <div id="p-subtitle-4" class="step subtitle" data-x="11200" data-y="5000" data-z="2000" data-scale="5">
+        <h1>最强大脑</h1>
+        <h2>——互动游戏，少先队你问我答</h2>
+    </div>
+
+    <div id="p-question01" class="step content p-question" data-x="11200" data-y="-1500" data-z="-1000" data-rel-rotate-z="-360" data-scale="1">
+        <h2>1. 少先队员的标志是（ ）</h2>
+        <ol>
+            <li>A. 队旗队徽</li>
+            <li>B. 红领巾</li>
+            <li>C. 星星火炬</li>
+            <li>D. 五星红旗</li>
+        </ol>
+    </div>
+
+    <div id="p-question02" class="step content p-question" data-x="11200" data-y="-1500" data-z="-4000" data-rel-rotate-z="-720" data-scale="0.2">
+        <h2>2. 少先队的敬礼表示（ ）</h2>
+        <ol>
+            <li>A. 祖国利益高于一切</li>
+            <li>B. 人民利益高于一切</li>
+            <li>C. 集体利益高于一切</li>
+        </ol>
+    </div>
+
+    <div id="p-question03" class="step content p-question" data-x="11200" data-y="-1500" data-z="-7000" data-rel-rotate-z="-1080" data-scale="0.04">
+        <h2>3. 下列选项中不是少先队的作风是（ ）</h2>
+        <ol>
+            <li>A. 诚实</li>
+            <li>B. 勇敢</li>
+            <li>C. 勤劳</li>
+            <li>D. 活泼</li>
+            <li>E. 团结</li>
+        </ol>
+    </div>
+
+    <div id="p-question04" class="step content p-question" data-x="13200" data-y="-1500" data-z="-1000" data-rel-rotate-z="-1440" data-scale="1">
+        <h2>4. 呼号：“准备着：为共产主义事业而奋斗！”，应回答（ ）</h2>
+        <ol>
+            <li>A. “时刻准备着”</li>
+            <li>B. “准备着，为共产主义事业而奋斗”</li>
+            <li>C. “我们是共产主义接班人”</li>
+            <li>D. “为共产主义事业而奋斗”</li>
+        </ol>
+    </div>
+
+    <div id="p-question05" class="step content p-question" data-x="13200" data-y="-1500" data-z="-4000" data-rel-rotate-z="-1800" data-scale="0.2">
+        <h2>5. 下列敬礼时，不正确的是（ ）</h2>
+        <ol>
+            <li>A. 右手五指并拢，高举头上。</li>
+            <li>B. 敬队礼时，身体要立正。</li>
+            <li>C. 神情要严肃，动作要标准。</li>
+            <li>D. 掌心朝向正前方。</li>
+        </ol>
+    </div>
+
+    <div id="p-question06" class="step content p-question" data-x="13200" data-y="-1500" data-z="-7000" data-rel-rotate-z="-2160" data-scale="0.004">
+        <h2>6. 下列哪些话是习爷爷对我们的教导（多选题）</h2>
+        <ol>
+            <li>A. 用实际行动把红色基因传承下去。</li>
+            <li>B. 从小学习做人、从小学习立志、从小学习创造。</li>
+            <li>C. 从小学先锋，长大做先锋，努力成长为能够担当民族复兴的时代新人。</li>
+            <li>D. 好好学习，天天向上。</li>
+        </ol>
+    </div>
+
+
+    <div id="p-subtitle-5" class="step subtitle" data-x="16200" data-y="-1500" data-z="0" data-scale="1">
+        <h1>大合唱</h1>
+        <h2>——起唱响《中国少年先锋队队歌》</h2>
+    </div>
+    <div id="p-song" class="step"  data-x="17700" data-y="-1500" data-z="0" data-scale="1">
+    </div>
+
+    <div id="p-subtitle-6" class="step subtitle" data-x="21500" data-y="-1500" data-z="0" data-scale="1">
+        <img src="./pioneer/team-logo.png" id="end-logo">
+        <h1>谢谢！</h1>
+    </div>
+    <div id="p-subtitle-7" class="step subtitle skip end-team" data-x="21100" data-y="-1200" data-z="-500" data-scale=".5" data-rotate-z="-20">
+        <img src="./pioneer/snow-01.jpg" id="end-snow">
+    </div>
+    <div id="p-subtitle-8" class="step subtitle skip end-team" data-x="20700" data-y="-1800" data-z="-1000" data-scale=".5" data-rotate-z="0">
+        <img src="./pioneer/haoyixuan.jpg" id="end-haoyixuan">
+    </div>
+    <div id="p-subtitle-9" class="step subtitle skip end-team" data-x="20900" data-y="-1200" data-z="-300" data-scale=".4" data-rotate-z="0">
+        <img src="./pioneer/zhuyiyi.jpg" id="end-zhuyiyi">
+    </div>
+    <div id="p-subtitle-10" class="step subtitle skip end-team" data-x="20300" data-y="-1500" data-z="-1000" data-scale=".5" data-rotate-z="10">
+        <img src="./pioneer/caoshiyu.jpg" id="end-caoshiyu">
+    </div>
     <!--
         
         Here is where interesting thing start to happen.
@@ -186,9 +394,9 @@
         Plugins: For first slide, set the autoplay time to a custom 10 seconds.
         
     -->
-    <div id="bored" class="step slide" data-x="-1000" data-y="-1500" data-autoplay="10">
-        <q>Aren’t you just <b>bored</b> with all those slides-based presentations?</q>
-    </div>
+    <!--    <div id="bored" class="step slide" data-x="-1000" data-y="-1500" data-autoplay="10">-->
+    <!--        <q>Aren’t you just <b>bored</b> with all those slides-based presentations?</q>-->
+    <!--    </div>-->
 
     <!--
         
@@ -205,13 +413,7 @@
         Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
         
     -->
-    <div class="step slide" data-x="0" data-y="-1500">
-        <q>Don’t you think that presentations given <strong>in modern browsers</strong> shouldn’t <strong>copy the limits</strong> of ‘classic’ slide decks?</q>
-    </div>
 
-    <div class="step slide" data-x="1000" data-y="-1500">
-        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
-    </div>
 
     <!--
         
@@ -223,11 +425,11 @@
         down (4 times) to make it back to its correct size.
         
     -->
-    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
-        <span class="try">then you should try</span>
-        <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
-    </div>
+<!--    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">-->
+<!--        <span class="try">then you should try</span>-->
+<!--        <h1>impress.js<sup>*</sup></h1>-->
+<!--        <span class="footnote"><sup>*</sup> no rhyme intended</span>-->
+<!--    </div>-->
 
     <!--
         
@@ -237,15 +439,15 @@
         element should be rotated by 90 degrees clockwise.
         
     -->
-    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
-        <p>It’s a <strong>presentation tool</strong> <br/>
-        inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>
-        and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
-    </div>
+<!--    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">-->
+<!--        <p>It’s a <strong>presentation tool</strong> <br/>-->
+<!--            inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>-->
+<!--            and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>-->
+<!--    </div>-->
 
-    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
-        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
-    </div>
+<!--    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">-->
+<!--        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>-->
+<!--    </div>-->
 
     <!--
         
@@ -256,9 +458,9 @@
         positioned far away from us (by 3000px).
         
     -->
-    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
-        <p>and <b>tiny</b> ideas</p>
-    </div>
+<!--    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">-->
+<!--        <p>and <b>tiny</b> ideas</p>-->
+<!--    </div>-->
 
     <!--
         
@@ -284,22 +486,23 @@
         See src/plugins/rel/README.md for more information.
         
     -->
-    <div id="ing" class="step" data-x="3500" data-y="-850" data-z="0" data-rotate="270" data-scale="6">
-        <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
-    </div>
+<!--    <div id="ing" class="step" data-x="3500" data-y="-850" data-z="0" data-rotate="270" data-scale="6">-->
+<!--        <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b-->
+<!--                class="scaling">scaling</b> them on an infinite canvas</p>-->
+<!--    </div>-->
 
-    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-        <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
-    </div>
+<!--    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">-->
+<!--        <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>-->
+<!--    </div>-->
 
-    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-        <p>want to know more?</p>
-        <q><a href="http://github.com/impress/impress.js">use the source</a>, Luke!</q>
-    </div>
+<!--    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">-->
+<!--        <p>want to know more?</p>-->
+<!--        <q><a href="http://github.com/impress/impress.js">use the source</a>, Luke!</q>-->
+<!--    </div>-->
 
-    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-        <p>one more thing...</p>
-    </div>
+<!--    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">-->
+<!--        <p>one more thing...</p>-->
+<!--    </div>-->
 
     <!--
         
@@ -313,10 +516,12 @@
         as `data-rotate` (these two are basically aliases).
         
     -->
-    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-        <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it’s</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
-        <span class="footnote">* beat that, prezi ;)</span>
-    </div>
+<!--    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10"-->
+<!--         data-scale="2">-->
+<!--        <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span-->
+<!--                class="its">it’s</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>-->
+<!--        <span class="footnote">* beat that, prezi ;)</span>-->
+<!--    </div>-->
 
     <!--
         
@@ -333,7 +538,7 @@
         CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
         
     -->
-    <div id="overview" class="step" data-x="3000" data-y="1500" data-z="0" data-scale="10">
+<!--    <div id="overview" class="step" data-x="3000" data-y="1500" data-z="0" data-scale="10">-->
     </div>
 
 </div>
@@ -371,12 +576,12 @@
 -->
 <div class="hint">
     <p>Use a spacebar or arrow keys to navigate. <br/>
-       Press 'P' to launch speaker console.</p>
+        Press 'P' to launch speaker console.</p>
 </div>
 <script>
-if ("ontouchstart" in document.documentElement) { 
-    document.querySelector(".hint").innerHTML = "<p>Swipe left or right to navigate</p>";
-}
+    if ("ontouchstart" in document.documentElement) {
+        document.querySelector(".hint").innerHTML = "<p>Swipe left or right to navigate</p>";
+    }
 </script>
 
 <!--
@@ -396,6 +601,7 @@ if ("ontouchstart" in document.documentElement) {
 -->
 <script src="js/impress.js"></script>
 <script>impress().init();</script>
+<script src="js/pioneer.js"></script>
 
 <!--
     
